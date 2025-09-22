@@ -1,0 +1,7 @@
+# @package data
+defaults:
+  - defaults
+
+dataset:
+  root: /flare/datasets/wb2/0.25deg_1_step_6hr_h5df_fix_bug
+  split: train
