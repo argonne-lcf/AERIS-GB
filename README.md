@@ -9,5 +9,7 @@ The presented configs:
 - Train-6h-Hurricane: Full training setup used for the 6h hurricane tracks.
 
 Most of the interesting parts are in:
-- src/aeris/parallelism/parallel_engine.py
-- src/aeris/models/parallel_swin.py
+- `src/aeris/parallelism/parallel_engine.py`
+- `src/aeris/models/parallel_swin.py`
+## WP-only inference
+`scripts/wp_inference.sh` contains an entry point for running simpler window-partitioning only inference with no pipeline, sequence, or data parallelism. The code can be found at `src/aeris_wp_inference`

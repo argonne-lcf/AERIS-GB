@@ -18,7 +18,7 @@ import shutil
 from glob import glob
 
 ####
-#This file is practically copy-paste and search-replace of the parallel_engine.py. Sorry... It would be possible to do inference with just that one instead with some changes.
+#This file is practically copy-paste and search-replace of the pipeline_engine.py. Sorry... It would be possible to do inference with just that one instead with some changes.
 ####
 
 def _is_even(x):
