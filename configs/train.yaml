@@ -1,0 +1,15 @@
+defaults:
+  - _self_
+  - trainer: defaults
+  - optimizer: adamw
+  - experiment: train
+
+seed: 1234
+resume: null
+dry_run: false
+
+hydra:
+  run:
+    dir: results/${experiment_name}/${now:%Y%m%d_%H%M%S}
+  job:
+    chdir: true

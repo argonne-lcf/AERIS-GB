@@ -1,0 +1,6 @@
+# training arguments
+total_kimg: 200000  # n steps, measured in thousands of training images.
+ema_halflife_kimg: 500  # half-life of EMA of model weights.
+ema_rampup_ratio: 0.05  # EMA ramp-up coefficient, None = disable.
+lr_rampup_kimg: 10000  # n learning rate ramp-up.
+lr_min_factor: 0.01  # min factor relative to lr [0,1]

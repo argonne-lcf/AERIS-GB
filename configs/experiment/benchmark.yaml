@@ -1,0 +1,86 @@
+seed: 1234
+resume: null
+dry_run: false
+trainer:
+  total_kimg: 25000
+  ema_halflife_kimg: 100
+  ema_rampup_ratio: 0.05
+  lr_rampup_kimg: 100
+  lr_min_factor: 0.01
+  lr_rampdown_start: 100000000
+  lr_rampdown_length: 50000
+  lr_rampdown_ema_min_ratio: 1.0
+  benchmark_steps: -1
+  sleep_after_done: false
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 0.0003
+  betas:
+  - 0.9
+  - 0.95
+  weight_decay: 0.01
+  eps: 1.0e-08
+data:
+  data_workers: 7
+  dataset:
+    root: /flare/datasets/wb2/0.25deg_1_step_6hr_h5df_fix_bug
+    split: train
+  gas: 100
+  wp_load: true
+  root: /flare/SAFS/vhat/data/nonres-30x30/
+model:
+  window_size: [30, 30]
+  dim: 6144
+  heads: 48
+  head_dim: 128
+  mlp_dim: 40960
+  PP_stages: 20
+  SP: 12
+  WP_X: 6
+  WP_Y: 6
+  load: false
+  checkpoint_dir: /path/to/checkpoint
+  norm: pre
+  emb_init: 0.012
+  weight_init: 0.008
+  attn_fn: flash
+  custom_decay: false
+  custom_decay2: false
+  custom_decay3: false
+  custom_decay4: false
+  custom_decay5: false
+  custom_decay6: false
+  custom_high_wd: 1.0
+  P_mean: -1.2
+  P_std: 1.2
+  sigma_data: 1.0
+  sigma_min: 0.02
+  sigma_max: 200
+  w_lat_add: 0.01
+  sublayers: 2
+  rit: true
+  diffusion: false
+  grad_clip: true
+  grad_clip_norm_type: 2.0
+  grad_clip_max_norm: 1.0
+  overlap_p2p_comms: true
+  dist_optimizer: true
+  benchmark: true
+  gpu_datamovement: true
+  rs_grads: false
+  emb_norm: false
+  init_scale_test14: false
+  init_scale_test15: false
+  time_emb_init: 0.01
+  head_init_std: 0.6
+  token_emb_init_std: 0.6
+  modulation_0_init: 0
+  modulation_2_init: 0
+  layerwise_t_emb: false
+  layerwise_t_emb_after_mod_norm: false
+  sinusoidal_emb_max_period: 10000
+  enhanced_channels3: false
+  enhanced_channels4: false
+  interval: 6
+  refresh_decay: true
+experiment_name: benchmark

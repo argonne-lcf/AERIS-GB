@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aeris"
+description = ""
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Väinö Hatanpää", email = "vhatanpaeae@anl.gov" },
+  { name = "Eugene Ku", email = "eku@anl.gov" },
+  { name = "Jason Stock", email = "jason.stock@anl.gov" },
+  { name = "Sam Foreman", email = "foremans@anl.gov" },
+  { name = "Troy Arcomano", email = "tarcomano@anl.gov" },
+  { name = "Varuni Sastry", email = "vsastry@anl.gov" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "torch",
+  "torchinfo",
+  "matplotlib",
+  "zarr",
+  "dask",
+  "wandb",
+  "einops",
+  "ezpz @ git+https://github.com/saforem2/ezpz",
+]
+
+[project.optional-dependencies]
+dev = ["black", "isort"]
+
+[project.urls]
+Documentation = "https://github.com/stockeh/aeris"
+Issues = "https://github.com/stockeh/aeris/issues"
+Source = "https://github.com/stockeh/aeris"
+
+[tool.hatch.version]
+path = "src/aeris/__about__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/.github", "/input", "/results", "/wandb", "/media"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aeris"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
