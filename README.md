@@ -1,5 +1,8 @@
 # AERIS: Argonne Earth Systems Model for Reliable and Skillful Predictions
 
+![](https://github.com/argonne-lcf/AERIS-GB/blob/main/media/aeris-github-cover.light.png#gh-light-mode-only)
+![](https://github.com/argonne-lcf/AERIS-GB/blob/main/media/aeris-github-cover.dark.png#gh-dark-mode-only)
+
 Frozen snapshot of the AERIS code used for the 2025 ACM Gordon Bell Prize for Climate Modeling submission. This repository is provided as a reference. The code has been cleaned and unrelated experiments have been removed but has not been tested after cleanup.
 
 ## Configurations
