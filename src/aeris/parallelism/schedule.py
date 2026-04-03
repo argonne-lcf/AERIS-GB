@@ -1,3 +1,8 @@
+# Copyright (c) 2026, UChicago Argonne, LLC. All Rights Reserved.
+
+# AERIS: Argonne Earth Systems Model for Reliable and Skillful Predictions
+# This work is licensed under the MIT License. See LICENSE for details.
+
 from deepspeed.runtime.pipe.schedule import LoadMicroBatch, SendActivation, RecvActivation, ForwardPass, BufferOpInstruction, PipeSchedule, SendGrad, RecvGrad, BackwardPass, ReduceTiedGrads, ReduceGrads, OptimizerStep, _is_even, _is_odd
 
 class CustomTrainSchedule(PipeSchedule):
