@@ -10,8 +10,8 @@ Frozen snapshot of the AERIS code used for the 2025 ACM Gordon Bell Prize for Cl
 
 ## Key Components
 
-- `src/aeris/parallelism/parallel_engine.py`
-- `src/aeris/models/parallel_swin.py`
+- [`parallel_engine.py`](src/aeris/parallelism/parallel_engine.py) — Pipeline and sequence parallel training engine
+- [`parallel_swin.py`](src/aeris/models/parallel_swin.py) — Swin Transformer with sequence parallelism
 
 ## WP-Only Inference
 
